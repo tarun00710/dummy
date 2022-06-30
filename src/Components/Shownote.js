@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useNoteContext } from "../Context/NoteContext";
 
 const Shownote = () => {
   const { state,dispatch } = useNoteContext();
-
+  const navigate = useNavigate()
   return (
+    <>
     <div className="card_container">
       {state?.map((note,i) => {
         return <div className="note_card">
@@ -17,8 +19,10 @@ const Shownote = () => {
         </div>
       })}
       {/* {state[0].title} */}
-    </div>
-    // <div>{state}</div>
+      </div>
+      <button onClick={()=>navigate("/")}>Home</button>
+    </>
+  
   );
 };
 

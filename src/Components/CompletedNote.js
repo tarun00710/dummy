@@ -9,6 +9,7 @@ const CompletedNote = () => {
     <div className="note_card card_container">
         <h4>Title : {note.title}</h4>
         <p>Description : {note.description}</p>
+       
       </div>
     )
 
